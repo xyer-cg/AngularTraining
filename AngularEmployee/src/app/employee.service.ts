@@ -12,11 +12,6 @@ export class EmployeeService
 
   constructor (private http: HttpClient) { };
 
-  getEmployee (id: number): Observable<Object>
-  {
-    return this.http.get(`${this.baseUrl}/${id}`);
-  }
-
   createEmployee (employee: Object): Observable<Object>
   {
     return this.http.post(`${this.baseUrl}`, employee);
