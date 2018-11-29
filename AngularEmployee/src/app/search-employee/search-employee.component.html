@@ -2,8 +2,13 @@
 <div style="width: 300px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="salary">Salary</label>
-      <input type="number" class="form-control" id="salary" required [(ngModel)]="salary" name="salary">
+      <label for="minSalary">Min Salary</label>
+      <input type="number" class="form-control" id="minSalary" required [(ngModel)]="minSalary" name="minSalary">
+    </div>
+
+    <div class="form-group">
+      <label for="maxSalary">Max Salary</label>
+      <input type="number" class="form-control" id="maxSalary" required [(ngModel)]="maxSalary" name="maxSalary">
     </div>
 
     <div class="btn-group">

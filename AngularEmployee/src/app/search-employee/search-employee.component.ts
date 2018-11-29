@@ -9,19 +9,21 @@ import { EmployeeService } from '../employee.service';
 })
 export class SearchEmployeeComponent implements OnInit
 {
-  salary: number;
+  minSalary: number;
+  maxSalary: number;
   employees: Employee[];
 
   constructor (private employeeService: EmployeeService) { }
 
   ngOnInit ()
   {
-    this.salary = 0;
+    this.minSalary = 0;
+    this.maxSalary = 0;
   }
 
   private searchEmployees ()
   {
-    this.employeeService.getEmployeeBySalary (this.salary).subscribe (employees => this.employees = employees);
+    this.employeeService.getEmployeeBySalary (this.minSalary, this.maxSalary).subscribe (employees => this.employees = employees);
   }
 
   onSubmit ()

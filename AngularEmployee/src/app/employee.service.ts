@@ -27,9 +27,9 @@ export class EmployeeService
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
   }
 
-  getEmployeeBySalary (salary: number): Observable <any>
+  getEmployeeBySalary (minSalary: number, maxSalary: number): Observable <any>
   {
-    return this.http.get (`${this.baseUrl}/salary/${salary}`);
+    return this.http.get (`${this.baseUrl}/salary/${minSalary}/${maxSalary}`);
   }
 
   getEmployeeList (): Observable<any>
