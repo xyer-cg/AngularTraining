@@ -1,5 +1,13 @@
 <h4>Employees</h4>
-
-<div class="mx-auto text-left" *ngFor="let employee of employees | async" style="width: 300px;">
-  <employee-details [employee]='employee'></employee-details>
+<div class="mx-auto text-center">
+  <div class="row">
+    <span class="col-3">Name</span>
+    <span class="col-3">Salary</span>
+    <span class="col-3">Designation</span>
+    <span class="col-3">Delete</span>
+  </div>
+</div>
+<hr />
+<div class="mx-auto text-center" *ngFor="let employee of employees | async">
+  <employee-details class="row" [employee]='employee'></employee-details>
 </div>

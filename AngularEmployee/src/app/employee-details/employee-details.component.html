@@ -1,15 +1,4 @@
-<div *ngIf="employee">
-  <div>
-    <label>Name: </label> {{employee.name}}
-  </div>
-
-  <div>
-    <label>Salary: </label> {{employee.salary}}
-  </div>
-
-  <div>
-    <label>Designation: </label> {{employee.designation}}
-  </div>
-
-  <span class="btn is-small btn-danger" (click)='deleteEmployee()'>Delete</span>
-</div>
+<div class="col-3">{{employee.name}}</div>
+<div class="col-3">{{employee.salary}}</div>
+<div class="col-3">{{employee.designation}}</div>
+<div class="col-3"><button class="btn-sm btn btn-danger" size="sm" (click)='deleteEmployee()'>Delete</button></div>

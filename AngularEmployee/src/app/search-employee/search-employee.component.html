@@ -1,24 +1,39 @@
 <h4>Find By Salary</h4>
 <div class="mx-auto" style="width: 300px;">
   <form (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="minSalary">Min Salary</label>
+    <label for="minSalary">Min Salary</label>
+    <span class="md-form">
       <input type="number" class="form-control" id="minSalary" required [(ngModel)]="minSalary" name="minSalary">
-    </div>
+    </span>
 
-    <div class="form-group">
-      <label for="maxSalary">Max Salary</label>
+    <label for="maxSalary">Max Salary</label>
+    <span class="md-form">
       <input type="number" class="form-control" id="maxSalary" required [(ngModel)]="maxSalary" name="maxSalary">
-    </div>
+    </span>
 
-    <div class="btn-group">
+    <span class="btn-group">
       <button type="submit" class="btn btn-success">Submit</button>
-    </div>
+    </span>
   </form>
 </div>
 <hr />
-<ul>
-  <li *ngFor="let employee of employees">
-    <h4>{{employee.id}} - {{employee.name}} {{employee.salary}} {{employee.designation}}</h4>
-  </li>
-</ul>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Designation</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let employee of employees">
+      <tr>
+        <td>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.salary}}</td>
+        <td>{{employee.designation}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
