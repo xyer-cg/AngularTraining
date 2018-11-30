@@ -9,6 +9,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { EmployeesListComponent } from './employees-list/employees-list.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,18 @@
-<div class="col-3">{{employee.name}}</div>
-<div class="col-3">{{employee.salary}}</div>
-<div class="col-3">{{employee.designation}}</div>
-<div class="col-3"><button class="btn-sm btn btn-danger" size="sm" (click)='deleteEmployee()'>Delete</button></div>
+<div class="card-header text-center">
+    <h4>{{employee.name}}</h4>
+</div>
+<div class="card-body">
+    <table class="table table-hover table-borderless">
+        <tr>
+            <th>Salary</th>
+            <td>{{employee.salary}}</td>
+        </tr>
+        <tr>
+            <th>Designation</th>
+            <td>{{employee.designation}}</td>
+        </tr>
+    </table>
+    <div class="text-right">
+        <button class="btn-sm btn btn-outline-danger" (click)='deleteEmployee()' mdbWavesEffect>Delete</button>
+    </div>
+</div>
