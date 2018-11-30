@@ -1,5 +1,5 @@
-<h3>Find By Salary</h3>
-<div style="width: 300px;">
+<h4>Find By Salary</h4>
+<div class="mx-auto" style="width: 300px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="minSalary">Min Salary</label>
@@ -16,6 +16,7 @@
     </div>
   </form>
 </div>
+<hr />
 <ul>
   <li *ngFor="let employee of employees">
     <h4>{{employee.id}} - {{employee.name}} {{employee.salary}} {{employee.designation}}</h4>

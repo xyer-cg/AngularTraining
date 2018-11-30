@@ -1,10 +1,21 @@
-<div style="padding: 20px;">
+<div class="col-10 mx-auto" style="padding: 20px;">
   <h1 style="color: blue">{{title}}</h1>
   <h3>{{description}}</h3>
-  <nav>
-    <a routerLink="employee" class="btn btn-primary active" role="button" routerLinkActive="active">Employees</a>
-    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
-    <a routerLink="findbysalary" class="btn btn-primary active" role="button" routerLinkActive="active">Search</a>
+  <nav class="navbar navbar-expand-lg navbar-dark indigo">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarNav">
+      <div class="nav navbar-nav navbar-right">
+        <a routerLink="employee" class="nav-item nav-link waves-light active" routerLinkActive="active">Employees</a>
+        <a routerLink="add" class="nav-item nav-link waves-light" routerLinkActive="active">Add</a>
+        <a routerLink="findbysalary" class="nav-item nav-link waves-light" routerLinkActive="active">Search</a>
+      </div>
+    </div>
   </nav>
-  <router-outlet></router-outlet>
+  <br>
+  <div class="card card-body text-center">
+    <router-outlet></router-outlet>
+  </div>
 </div>

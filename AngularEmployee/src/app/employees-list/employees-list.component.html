@@ -1,5 +1,5 @@
-<h3>Employees</h3>
+<h4>Employees</h4>
 
-<div *ngFor="let employee of employees | async" style="width: 300px;">
+<div class="mx-auto text-left" *ngFor="let employee of employees | async" style="width: 300px;">
   <employee-details [employee]='employee'></employee-details>
 </div>
