@@ -1,7 +1,9 @@
 <div class="container text-center">
   <h4>Employees</h4>
   <hr>
-  <div class="col-lg-8 offset-lg-2" *ngFor="let employee of employees | async">
-    <employee-details class="card" [employee]='employee'></employee-details>
+  <div *ngFor="let employee of employees | async">
+    <div class="col-lg-4 my-3 float-left">
+      <employee-details class="card" [employee]='employee'></employee-details>
+    </div>
   </div>
 </div>

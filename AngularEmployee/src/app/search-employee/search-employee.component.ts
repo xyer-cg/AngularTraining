@@ -17,8 +17,8 @@ export class SearchEmployeeComponent implements OnInit
 
   ngOnInit ()
   {
-    this.minSalary = 0;
-    this.maxSalary = 0;
+    this.minSalary = -1;
+    this.maxSalary = -1;
   }
 
   private searchEmployees ()

@@ -4,16 +4,16 @@
   </div>
   <div class="card-body">
     <div class="table-row">
-      <form (ngSubmit)="onSubmit()">
+      <form (ngSubmit)="onSubmit()" ngNativeValidate>
         <div class="col-lg-8 offset-lg-2">
           <div class="md-form">
             <input type="number" class="form-control" id="minSalary" required [(ngModel)]="minSalary" name="minSalary"
-              mdbInputDirective>
+              mdbInputDirective [mdbValidate]="false">
             <label for="minSalary">Min Salary</label>
           </div>
           <div class="md-form">
             <input type="number" class="form-control" id="maxSalary" required [(ngModel)]="maxSalary" name="maxSalary"
-              mdbInputDirective>
+              mdbInputDirective [mdbValidate]="false">
             <label for="maxSalary">Max Salary</label>
           </div>
           <div class="text-right">
@@ -22,26 +22,26 @@
         </div>
       </form>
     </div>
-    <div class="table-responsive text-center col-lg-10 offset-lg-1" *ngIf="employees && employees.length">
-      <hr />
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Salary</th>
-            <th>Designation</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let employee of employees">
-          <tr>
-            <td>{{employee.id}}</td>
-            <td>{{employee.name}}</td>
-            <td>{{employee.salary}}</td>
-            <td>{{employee.designation}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </div>
+</div>
+<br>
+<div class="card table-responsive text-center" *ngIf="employees?.length > 0">
+  <table class=" table table-hover table-borderless">
+    <thead class="card-header">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Designation</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let employee of employees">
+      <tr>
+        <th>{{employee.id}}</th>
+        <td>{{employee.name}}</td>
+        <td>{{employee.salary}}</td>
+        <td>{{employee.designation}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

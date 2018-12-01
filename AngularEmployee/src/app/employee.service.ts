@@ -24,7 +24,12 @@ export class EmployeeService
 
   getEmployeeBySalary (minSalary: number, maxSalary: number): Observable <any>
   {
-    return this.http.get (`${this.baseUrl}/salary/${minSalary}/${maxSalary}`);
+    if (maxSalary >= 0)
+    {
+      return this.http.get (`${this.baseUrl}/salary/${minSalary}/${maxSalary}`);
+    }
+
+    return this.http.get (`${this.baseUrl}/salary/${minSalary}`);
   }
 
   getEmployeeList (): Observable<any>
